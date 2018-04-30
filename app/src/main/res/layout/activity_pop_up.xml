@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/ractangle"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp">
+    <TextView
+    android:id="@+id/text_forgetpass"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:text="@string/forgot_passwordpopup"
+    android:textColor="@color/colorBrown"
+    android:textSize="20dp" />
+        <ImageView
+            android:id="@+id/image_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close_icon"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <EditText
+    android:id="@+id/edit_emailadd"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:hint="@string/eaddress"
+    android:textSize="15dp"
+    android:textColorHint="@color/colorGray"
+    android:inputType="textEmailAddress"
+    android:backgroundTint="@color/colorGreen"
+    android:textColor="@color/colorGray"
+    android:singleLine="true"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="25dp"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="15dp"
+    android:layout_gravity="center"
+    android:gravity="center_vertical"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    >
+    <TextView
+        android:id="@+id/text_okbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="@string/ok"
+        android:textSize="20dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/ract_button"
+        android:textColor="@color/colorWhite"
+        />
+</RelativeLayout>
+
+</LinearLayout>

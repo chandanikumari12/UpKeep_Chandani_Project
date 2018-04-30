@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Verifyemail"
+    android:background="@drawable/background_image">
+    <ImageView
+        android:id="@+id/image_headverify"
+        android:layout_width="@dimen/scal_25dp"
+        android:layout_height="@dimen/scal_40dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginLeft="@dimen/scal_20dp"/>
+    <ImageView
+        android:id="@+id/image_upkeep"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginTop="@dimen/scal_15dp"
+        android:src="@drawable/upkeep_signup_image"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ractangle"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/text_verifyaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/text_codemail"
+            android:text="@string/verify_account"
+            android:textColor="@color/colorBrown"
+            android:gravity="center_horizontal"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/text_codemail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linedit_dig1"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/code_email"
+            android:textColor="@color/colorGray"
+            android:textSize="15dp" />
+        <LinearLayout
+            android:id="@+id/linedit_dig1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_btnsignup"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dp">
+
+            <EditText
+                android:id="@+id/edit_text1"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:hint="*"
+                android:maxLength="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:textColorHint="@color/colorGray"
+                android:backgroundTint="@color/colorGray"/>
+
+
+
+            <EditText
+                android:id="@+id/edit_text2"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:hint="*"
+                android:singleLine="true"
+                android:gravity="center"
+                android:maxLength="1"
+                android:inputType="number"
+                android:layout_gravity="center"
+                android:textColorHint="@color/colorGray"
+                android:backgroundTint="@color/colorGray"/>
+
+
+                <EditText
+                    android:id="@+id/edit_text3"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:hint="*"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/colorGray"
+                    android:backgroundTint="@color/colorGray"/>
+
+                <EditText
+                    android:id="@+id/edit_text4"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:hint="*"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:imeOptions="actionDone"
+                    android:layout_gravity="center"
+                    android:textColorHint="@color/colorGray"
+                    android:backgroundTint="@color/colorGray"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text_btnsignup"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_above="@+id/text_vericode"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/ract_button"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite" />
+
+         <TextView
+                android:id="@+id/text_vericode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_above="@+id/text_resend"
+                android:text="@string/dont_receive"
+                android:textColor="@color/colorBrown"
+                android:layout_centerHorizontal="true"
+                android:textSize="18dp" />
+            <TextView
+                android:id="@+id/text_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_code"
+                android:textColor="@color/colorGreen"
+                android:textSize="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                />
+    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

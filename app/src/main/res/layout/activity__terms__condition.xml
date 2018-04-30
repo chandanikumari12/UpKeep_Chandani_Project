@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_Terms_Condition"
+    android:background="@drawable/background_image">
+    <ImageView
+        android:id="@+id/image_terms_conditions"
+        android:layout_width="@dimen/scal_25dp"
+        android:layout_height="@dimen/scal_40dp"
+        android:layout_marginLeft="@dimen/scal_10dp"
+        android:src="@drawable/back_arrow"/>
+    <ImageView
+        android:id="@+id/image_upkeep"
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:src="@drawable/upkeep_signup_image"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ractangle"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="40dp">
+
+        <TextView
+            android:id="@+id/text_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="@dimen/scal_40dp"
+            android:text="@string/terms_conditions"
+            android:textColor="@color/colorBrown"
+            android:textAllCaps="true"
+            android:textSize="18dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+            android:id="@+id/text_termcondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/scal_10dp"
+            android:paddingLeft="@dimen/scal_10dp"
+            android:paddingBottom="@dimen/scal_20dp"
+            android:text="@string/text"
+            android:textColor="@color/colorGreen"
+            />
+        </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

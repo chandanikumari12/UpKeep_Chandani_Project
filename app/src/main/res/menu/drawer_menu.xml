@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/nav_g11"
+        android:checkableBehavior="single">
+    </group>
+
+    <group
+        android:id="@+id/nav_g1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:icon="@mipmap/home"
+            android:title="@string/home" />
+    </group>
+    <group
+        android:id="@+id/nav_g2"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:icon="@mipmap/manage_banking"
+            android:title="@string/manage_banking" />
+    </group>
+    <group
+        android:id="@+id/nav_g3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:icon="@mipmap/manage_tenantes"
+            android:title="@string/manage_tenants"/>
+    </group>
+    <group
+        android:id="@+id/nav_g4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_four_fragment"
+            android:icon="@mipmap/notification"
+            android:title="@string/notifications" />
+    </group>
+    <group
+        android:id="@+id/nav_g5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_five_fragment"
+            android:icon="@mipmap/my"
+            android:title="@string/my_properties" />
+    </group>
+    <group
+        android:id="@+id/nav_g6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_six_fragment"
+            android:icon="@mipmap/chat"
+            android:title="@string/chat"/>
+    </group>
+    <group
+        android:id="@+id/nav_g7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_eight_fragment"
+            android:icon="@mipmap/setting"
+            android:title="@string/settings" />
+    </group>
+    <group
+        android:id="@+id/nav_g8"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_nine_fragment"
+            android:icon="@mipmap/terms_condition"
+            android:title="@string/terms_conditions"/>
+    </group>
+    <group
+        android:id="@+id/nav_g9"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ten_fragment"
+            android:icon="@mipmap/supported"
+            android:title="@string/support" />
+    </group>
+    <group
+        android:id="@+id/nav_g10"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_eleven_fragment"
+            android:icon="@mipmap/logout"
+            android:title="@string/sign_out" />
+    </group>
+
+
+</menu>
