@@ -34,7 +34,8 @@
             android:name=".Activity_Add_Property"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Activity_Tenant_GetStarted" />
-        <activity android:name=".Chatting_Area"></activity>
+        <activity android:name=".Chatting_Area" />
+        <activity android:name=".Landlord_Tenant_Tradesman_Activity"></activity>
     </application>
 
 </manifest>

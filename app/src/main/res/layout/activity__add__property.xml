@@ -197,7 +197,7 @@
     <EditText
         android:id="@+id/edit_property_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:hint="@string/property_name"
         android:textColor="@color/colorGray"
         android:singleLine="true"
@@ -209,7 +209,7 @@
         android:id="@+id/edit_total_room"
         android:layout_below="@+id/edit_property_name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:textColor="@color/colorGray"
         android:hint="@string/total_room_flat"
         android:singleLine="true"
@@ -220,21 +220,21 @@
     <RelativeLayout
         android:id="@+id/spiner_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_below="@+id/edit_total_room">
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
             android:src="@mipmap/add_image"
             android:paddingLeft="4dp"
-            android:paddingTop="9dp"/>
+            />
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/scal_30dp"
-        android:textSize="15dp"
-        android:paddingLeft="@dimen/scal_20dp"
-
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="30dp"
+        android:paddingLeft="@dimen/scal_25dp"
 
         />
     </RelativeLayout>
@@ -243,6 +243,7 @@
         android:layout_below="@+id/spiner_view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+
         android:layout_marginRight="3dp"
         android:layout_marginLeft="3dp"
         android:background="@color/colorGray"/>
@@ -250,44 +251,44 @@
         android:id="@+id/edit_address1"
         android:layout_below="@+id/spiner_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:textColor="@color/colorGray"
         android:hint="@string/address_line1"
         android:singleLine="true"
         android:textSize="15dp"
         android:drawableLeft="@mipmap/location_icon"
-        android:drawablePadding="8dp"
+        android:drawablePadding="4dp"
         android:backgroundTint="@color/colorGray"/>
     <EditText
         android:id="@+id/edit_address2"
         android:layout_below="@+id/edit_address1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:textColor="@color/colorGray"
         android:hint="@string/address_line2"
         android:singleLine="true"
         android:textSize="15dp"
         android:drawableLeft="@mipmap/location_icon"
-        android:drawablePadding="8dp"
+        android:drawablePadding="4dp"
         android:backgroundTint="@color/colorGray"/>
     <RelativeLayout
         android:id="@+id/rel_spinner"
         android:layout_below="@+id/edit_address2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="30dp">
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/scal_30dp"
             android:paddingLeft="4dp"
-            android:paddingTop="9dp"
+            android:layout_alignParentBottom="true"
             android:src="@mipmap/location_icon"/>
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/scal_30dp"
-        android:paddingLeft="@dimen/scal_20dp"
-        android:textSize="15dp"
-        />
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="30dp"
+            android:paddingLeft="@dimen/scal_25dp"
+            />
     </RelativeLayout>
     <View
         android:id="@+id/view2"
@@ -337,6 +338,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:padding="@dimen/scal_5dp"
+        android:layout_marginTop="@dimen/scal_25dp"
         android:orientation="horizontal"
         android:background="@drawable/discription_ract">
         <ImageView
@@ -350,7 +352,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:hint="@string/discription"
-        android:paddingLeft="@dimen/scal_30dp"
+        android:paddingLeft="@dimen/scal_40dp"
         android:gravity="top"
         android:textColor="@color/colorGray"
         android:background="@android:color/transparent"
