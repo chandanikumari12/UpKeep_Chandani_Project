@@ -1,17 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-    <TextView
-        android:id="@+id/text_string"
+    android:id="@+id/linearlist"
+    android:padding="16dp"
+    android:layout_margin="5sp"
+    android:background="@drawable/repair_layout"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:id="@+id/relative_grpimg"
+        android:visibility="visible"
+        android:background="@drawable/message_layout">
+        <ImageView
+            android:layout_width="@dimen/scal_40dp"
+            android:src="@mipmap/fan"
+            android:id="@+id/world_image"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            android:layout_height="@dimen/scal_40dp" />
+    </RelativeLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:text="@string/pennsyivania_ave"
-        android:textColor="@color/colorBrown"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/scal_10dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="16dp"
+        android:text="dfsfkspfok fpsfsdfd sfdfsfkspfok"
         />
 
-
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:text="dfsfkspfokfpsfsdfdsf"        />
+    </LinearLayout>
 </LinearLayout>

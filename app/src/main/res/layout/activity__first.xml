@@ -13,23 +13,17 @@
         android:layout_width="wrap_content"
         android:layout_height="110dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:src="@drawable/upkeep_signup_image" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="@dimen/scal_20dp"
         android:background="@drawable/ractangle"
         android:orientation="vertical"
-
         >
 
         <TextView
@@ -128,5 +122,4 @@
 
     </LinearLayout>
 
-    </LinearLayout>
 </LinearLayout>

@@ -13,6 +13,7 @@ public class Item {
     private String surname;
     private String image;
     private String id,type;
+    private String repair_type;
     private String check_teammember;
 
     private  JSONArray jsonarray;
@@ -25,11 +26,11 @@ public class Item {
         this.image = image;
     }
 
-    public Item(String name, String surname)
+ /*   public Item(String s4, String s3, String s2, String s1, String s, String name, String surname)
     {
         this.name = name;
         this.surname = surname;
-    }
+    }*/
 
     public Item(String name, String surname, String createdon, String isread, String video, String type)
     {
@@ -40,7 +41,16 @@ public class Item {
         this.video = video;
         this.type = type;
     }
-
+    public Item(String name, String surname, String createdon, String isread, String video, String type,String repair_type)
+    {
+        this.name = name;
+        this.surname = surname;
+        this.createdon = createdon;
+        this.isread = isread;
+        this.video = video;
+        this.type = type;
+        this.repair_type = repair_type;
+    }
     public Item(String rank, String team_name, String team_points, String tid, String video, JSONObject jsonObject2)
     {
         this.name = rank;
@@ -113,6 +123,7 @@ public class Item {
     }
 
     public String getId(){return id;}
+    public String getRepair_type(){return repair_type;}
     public String getCreatedon()
     {
         return createdon;

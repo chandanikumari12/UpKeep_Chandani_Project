@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:weightSum="1"
+    android:paddingBottom="@dimen/scal_10dp"
+    android:paddingTop="@dimen/scal_10dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/awiting"
+        android:layout_weight="0.1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:layout_weight="0.7"
+        android:textSize="@dimen/scal_18dp"
+
+        android:text="Mickey"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:src="@mipmap/one_chat"
+        android:id="@+id/message_icon"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/phone_green"
+        android:id="@+id/phone_icon"
+        android:layout_weight="0.1"
+        />
+
+
+</LinearLayout>

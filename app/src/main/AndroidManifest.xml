@@ -35,7 +35,18 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".Activity_Tenant_GetStarted" />
         <activity android:name=".Chatting_Area" />
-        <activity android:name=".Landlord_Tenant_Tradesman_Activity"></activity>
+        <activity android:name=".Landlord_Tenant_Tradesman_Activity" />
+        <activity android:name=".My_Property_Activity" />
+        <activity android:name=".Add_RepairActivity" />
+        <activity android:name=".Activity_Add_Payment" />
+        <activity android:name=".Activity_Support" />
+        <activity android:name=".Edit_profile.EditProfileActivity" />
+        <activity android:name=".Repair_COntact_listActivity" />
+        <activity android:name=".Activity_Home_Search" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".SearchView_Activity" />
+        <activity android:name=".Tenant.Tenant_Activity_Banking" />
+        <activity android:name=".Tenant.Connect_Landlord_Activity"></activity>
     </application>
 
 </manifest>

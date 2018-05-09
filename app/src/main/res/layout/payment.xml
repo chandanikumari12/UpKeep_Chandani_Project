@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_payment"
+        >
+    <include
+        android:id="@+id/include_head"
+        layout="@layout/payment_header"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:ignore="NotSibling" />
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:src="@drawable/door_repair"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3/7"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/scal_40dp"
+        android:layout_marginRight="@dimen/scal_5dp"
+        android:textColor="@color/colorWhite" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/ractangle_white_box"
+        android:layout_marginRight="@dimen/scal_10dp"
+        android:layout_marginLeft="@dimen/scal_10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/the_portion"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gray_background_line">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="$ Payments :-"
+    android:textSize="@dimen/scal_20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:textColor="@color/colorGreen"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/scal_10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scal_20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:text="$9.00"
+                android:textSize="@dimen/scal_20dp"
+                android:gravity="center"
+                android:background="@drawable/green_background2"
+                android:layout_height="@dimen/scal_40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="$20.00"
+                android:gravity="center"
+                android:textSize="@dimen/scal_20dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/gray_background_curve_line"
+                android:layout_height="@dimen/scal_40dp"/>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>
+</LinearLayout>

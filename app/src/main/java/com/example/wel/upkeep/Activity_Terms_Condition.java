@@ -12,23 +12,23 @@ import android.widget.Toast;
 
 public class Activity_Terms_Condition extends AppCompatActivity {
     TextView text_termcondition,text_heading;
-    ImageView image_terms_conditions;
+    ImageView image_head_terms_con;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity__terms__condition);
         text_termcondition=(TextView)findViewById(R.id.text_termcondition);
-        image_terms_conditions=(ImageView)findViewById(R.id.image_terms_conditions);
+        image_head_terms_con=(ImageView)findViewById(R.id.image_head_terms_con);
         text_heading=(TextView)findViewById(R.id.text_heading);
 
 
 
-        image_terms_conditions.setOnClickListener(new View.OnClickListener() {
+        image_head_terms_con.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(Activity_Terms_Condition.this,Landlord_Tenant_Activity.class);
-                startActivity(i);
+                Intent i=new Intent(Activity_Terms_Condition.this,Home_Activity.class);
+                finish();
             }
         });
         Typeface museosans = Typeface.createFromAsset(getResources().getAssets(), "fonts/nunito_semibold.ttf");   //Set Font Family

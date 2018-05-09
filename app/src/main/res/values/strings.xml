@@ -10,7 +10,7 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="already_account">Already Have An</string>
     <string name="account"><u>Account?</u></string>
-    <string name="welcome">Welcome Keep Up</string>
+    <string name="welcome">Welcome To UpKeep</string>
     <string name="sign_with_google">Sign in with Google+</string>
     <string name="login_facebook">Login with Facebook</string>
     <string name="email">Email</string>
@@ -30,16 +30,16 @@
     <string name="code_email">Please Enter Code Your Email</string>
     <string name="dont_receive">Didn\'t Receive The Verification Code?</string>
     <string name="resend_code"><u>Resend Code</u></string>
-    <string name="banking">Banking</string>
-    <string name="chat">Chat</string>
-    <string name="home">Home</string>
-    <string name="repair">Repair</string>
+    <string name="banking">BANKING</string>
+    <string name="chat">CHAT</string>
+    <string name="home">HOME</string>
+    <string name="repair">REPAIR</string>
     <string name="sample_dr">123 Sample Dr, Spokane WA</string>
     <string name="pennsyivania_ave">1600 Pennsyivania Ave, Washinggton</string>
     <string name="ave_new_york">3683 5th Ave New York, NY</string>
     <string name="manage_banking">Manage Banking</string>
     <string name="manage_tenants">Manage Tenants</string>
-    <string name="notifications">Notifications</string>
+    <string name="notifications">Manage Repair Contact</string>
     <string name="my_properties">My Properties</string>
     <string name="settings">Setting</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>
@@ -60,17 +60,18 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_main4">Main4Activity</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="reapair_contacts">Repair Contacts</string>
+    <string name="reapair_contacts">Repair Contact</string>
     <string name="agree_to_the">I AGREE TO THE</string>
     <string name="terms_and_conditions"><u>TERMS &amp; CONDITIONS</u></string>
     <string name="no">13</string>
-    <string name="repair_text">Hello how are you</string>
+    <string name="repair_text">123 Sample Dr Spokane India 4000512</string>
     <string name="text">oifoj fnkj nkjfnk kjfbn nkjgvb fbnkjb bgfnkjnkg nkjbgfnkj nfg lkgbnkg njb nlkvgb ng uiufhdsn  idsuhfvh uhidfsrkgvlk uifesuhh sfgb dfuis jsgfbj sugfz dfgsbjn fsuidhkjfs dfseyuik diug
     kdhsxkn fjgkd djhglk dilkhn dshglui dlkxn kljdfsg kllllfdgxlk lkjfgdh lfdg kfgdhj lkkdfg lhkfdgj kljfgd lkhdfhgh lkfdg jhhfd kjhhdf kjdf oiujhs jhdfshi fsrghkjg hfkd hjkfdg hdfsi hkjdf hjkfdg hjkfd
         hkjdsf hkdfs lkh nkjhfdg lkdgs k klfgd  jkdshihkdsh hifdhkjx jhfh hkjfd jkhgdfs uhdsk hkjfdxh kjhds hjkdsf gkjds  rdkjop ouijtdjlk  rgdhk lkjdfgilj df ghkjjlk ihkjlokhdfg lkdfglkj dfg
         nlkdfl jlljfg l kjhfdlj kljfglkj lkjfbgol ljdfgilj lkjfdglkj lkjdfgkj lkhdfg hdf hkjdfg hlhdfg hkjd khdf kjhdf lkjudf kldf kldfg khdf khdf jkhfgd hfgd hkfdg
         nhfkdhnnlkdfj kljfjgd klhjfd kfdlg kjldfg klhfdg kljfdg hjkdfs kjhfs kjhds jkdfsh jgdfs</string>
     <string name="add_property">Add Property</string>
+    <string name="add_payment">Add Payment</string>
     <string name="add_property_image">Add Image</string>
     <string name="property_name">Property Name</string>
     <string name="total_room_flat">Total Room / Flat</string>
@@ -83,8 +84,21 @@
     <string name="connect_with_landlord">Connect With Landlord</string>
     <string name="payment_setup">Payment Setup</string>
     <string name="discription">Description...</string>
+    <string name="landloard">Landlord</string>
+    <string name="tenant">Tenant</string>
+    <string name="my_property">My Property</string>
+    <string name="tradesman">Tradesman</string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry</string>
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="green">green</string>
+    <string name="add_repair_contact">Add Repair Contact</string>
+    <string name="the_portion">The portion on lock attached to door has broker off.portion connected to doorway is intact The portion on lock attached to door has broker off.protion connected to
+    doorway is intact.</string>
+    <string name="white">white</string>
     <string-array name="acc_type">
         <item>Income</item>
         <item>Expense</item>
     </string-array>
+    <string name="title_activity_febcircle">febcircle</string>
 </resources>

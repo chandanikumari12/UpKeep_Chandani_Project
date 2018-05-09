@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/repair_popup"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/scal_20dp"
+    android:layout_gravity="center_horizontal"
+    android:padding="@dimen/scal_10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repair Contacts"
+        android:textSize="@dimen/scal_22dp"
+        android:visibility="gone"
+        android:id="@+id/txt_heading"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorGreen"/>
+        <ImageView
+            android:layout_width="@dimen/scal_30dp"
+            android:layout_height="@dimen/scal_30dp"
+            android:src="@mipmap/repair_one"
+            android:id="@+id/repair_contact_image"
+            />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repair Contacts"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:textSize="@dimen/scal_22dp"
+         android:id="@+id/repair_contct_text"
+        android:textColor="@color/colorGreen"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/close_icon"
+            android:visibility="visible"
+            android:id="@+id/close_icon"
+            android:layout_marginRight="@dimen/scal_5dp"
+            />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/received"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/scal_5dp"
+            android:id="@+id/phone_icon"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/scal_18dp"
+            android:id="@+id/status_text"
+            android:visibility="gone"
+            android:text="Received"
+            />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recyclerview"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/arrow_more"
+        android:layout_gravity="right"
+        android:id="@+id/repair_image"/>
+</LinearLayout>

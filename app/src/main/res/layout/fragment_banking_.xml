@@ -1,0 +1,237 @@
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/scal_10dp"
+        android:layout_margin="@dimen/scal_15dp"
+        >
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="@dimen/scal_22dp"
+        android:gravity="center_horizontal"
+        android:text="Collected For : May 2018" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/scal_20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:text="$9.0"
+                android:textSize="@dimen/scal_20dp"
+                android:gravity="center"
+                android:background="@drawable/green_background2"
+                android:layout_height="@dimen/scal_40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="$20.0"
+                android:gravity="center"
+                android:textSize="@dimen/scal_20dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/gray_background_curve"
+                android:layout_height="@dimen/scal_40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/scal_20dp"
+            android:padding="@dimen/scal_10dp"
+            android:background="@drawable/gray_background">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/scal_22dp"
+                android:text="Owe Rent:" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_banking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/scal_20dp"
+            android:padding="@dimen/scal_10dp"
+            android:background="@drawable/gray_background">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/scal_22dp"
+                android:text="2018 Quick View :" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/scal_10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="@dimen/scal_18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rent Collection to Date of:" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/scal_18dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorGreen"
+                    android:text="$125.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:textSize="@dimen/scal_18dp"
+                    android:layout_height="wrap_content"
+                    android:text="Expected Revenue for 2018" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGreen"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0.5"
+                        android:textSize="@dimen/scal_18dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorGreen"
+                        android:text="$146.000" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scal_100dp"
+            android:layout_marginTop="@dimen/scal_20dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/scal_30dp"
+            android:layout_weight="3">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/scal_100dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/ract_button">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="36%"
+                android:gravity="center"
+                android:textSize="@dimen/scal_20dp"
+                android:textColor="@color/colorWhite"
+                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Paid"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/scal_100dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/scal_20dp"
+                android:background="@drawable/ract_button">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="100%"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_20dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+                <TextView
+                android:layout_width="wrap_content"
+                android:text="of Collected"
+                android:gravity="center"
+                android:textSize="@dimen/scal_15dp"
+                android:textColor="@color/colorWhite"
+                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Directly"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Deposited"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/scal_100dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/scal_20dp"
+                android:background="@drawable/ract_button">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="36%"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_20dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+                <TextView
+                android:layout_width="wrap_content"
+                android:text="of Due"
+                android:gravity="center"
+                android:textSize="@dimen/scal_15dp"
+                android:textColor="@color/colorWhite"
+                android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Unpaid"
+                    android:gravity="center"
+                    android:textSize="@dimen/scal_15dp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

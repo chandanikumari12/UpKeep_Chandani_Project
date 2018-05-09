@@ -103,7 +103,7 @@ public class Activity_Get_Started extends AppCompatActivity {
         banking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(Activity_Get_Started.this,Activity_Terms_Condition.class);
+                Intent i=new Intent(Activity_Get_Started.this,Activity_Add_Payment.class);
                 startActivity(i);
             }
         });
@@ -115,6 +115,12 @@ public class Activity_Get_Started extends AppCompatActivity {
             }
         });
 
-
+        repair_contact.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Activity_Get_Started.this,Add_RepairActivity.class);
+                startActivity(i);
+            }
+        });
     }
 }

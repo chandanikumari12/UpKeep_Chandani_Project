@@ -143,6 +143,13 @@ public class Activity_Add_Property extends AppCompatActivity {
 
             }
         });
+        text_btnadd_property.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(Activity_Add_Property.this,My_Property_Activity.class);
+                startActivity(i);
+            }
+        });
 
     }
     @Override

@@ -10,23 +10,20 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/colorGreen">
 
         <ImageView
             android:id="@+id/image_headaddprop"
             android:layout_width="@dimen/scal_25dp"
-            android:layout_height="@dimen/scal_40dp"
+            android:layout_height="wrap_content"
             android:src="@drawable/back_arrow"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="@dimen/scal_10dp"
             android:layout_marginLeft="@dimen/scal_20dp"/>
         <TextView
             android:id="@+id/text_addprop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_arrow"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="@dimen/scal_20dp"
             android:text="@string/add_property"
             android:textColor="@color/colorWhite"
@@ -326,6 +323,7 @@
             android:textColor="@color/colorGray"
             android:layout_alignParentRight="true"
             android:textSize="15dp"
+            android:inputType="number"
             android:singleLine="true"
             android:layout_weight="0.5"
             android:drawableLeft="@mipmap/post_card"
@@ -364,7 +362,7 @@
         android:layout_below="@+id/linedit_discription"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="@dimen/scal_25dp"
         android:background="@drawable/ract_button"
         android:gravity="center"
         android:text="@string/add_property"

@@ -1,8 +1,11 @@
 package com.example.wel.upkeep;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
@@ -11,6 +14,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -21,6 +25,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,19 +35,22 @@ import android.widget.Toast;
 
 
 import com.example.wel.upkeep.Adapter.RecyclerViewAdapter;
+import com.example.wel.upkeep.Edit_profile.EditProfileActivity;
+import com.example.wel.upkeep.chat_system.chat_screen.Chat_Screen_Fragment;
 
 import java.util.ArrayList;
 
 public class Home_Activity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     Toolbar toolbar;
-    ImageView image_menu, imageSearch, image_home, image_banking, image_repair, image_chat;
+    ImageView image_menu, imageSearch, image_home, image_banking, image_repair, image_chat,logout_cross,bckarrow,img_search,arrow_search,bckarrow_menu;
     TextView text_home, text_repair, text_banking, text_chat, text_home1, textmy_properties,group_name,dmanage_banking,
-    dmanage_tenant,dnotification,dmy_Properties,dchat,dsetting,dterm_condition,dsupport,dsign_out;
-    LinearLayout lin_home, lin_repair, lin_banking, lin_chat, imgtxt_chat,text_image_chat;
+    dmanage_tenant,dnotification,dmy_Properties,dchat,dsetting,dterm_condition,dsupport,dsign_out,yes_text,no_text;
+    LinearLayout lin_home, lin_repair, lin_banking, lin_chat, imgtxt_chat,text_image_chat,search_visible,lin_tool,linearlist,user_header;
     ActionBarDrawerToggle drawerToggle;
     NavigationView nav_view;
     FrameLayout fragment_container;
+    DrawerLayout drawer_layout;
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
@@ -63,8 +71,8 @@ public class Home_Activity extends AppCompatActivity {
 
 
         /*  mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);*/
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+       /* toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);*/
 
         image_menu = (ImageView) findViewById(R.id.image_menu);
         imageSearch = (ImageView) findViewById(R.id.text_search);
@@ -72,6 +80,11 @@ public class Home_Activity extends AppCompatActivity {
         image_repair = (ImageView) findViewById(R.id.image_repair);
         image_banking = (ImageView) findViewById(R.id.image_banking);
         image_chat = (ImageView) findViewById(R.id.image_chat);
+        bckarrow = (ImageView) findViewById(R.id.bckarrow);
+        img_search= (ImageView) findViewById(R.id.img_search);
+        arrow_search=(ImageView)findViewById(R.id.arrow_search);
+        bckarrow_menu=(ImageView)findViewById(R.id.bckarrow_menu);
+        drawer_layout=(DrawerLayout)findViewById(R.id.drawer_layout);
 
         nav_view = (NavigationView) findViewById(R.id.navigation1);
 
@@ -87,6 +100,7 @@ public class Home_Activity extends AppCompatActivity {
         dmanage_tenant = (TextView) findViewById(R.id.dmanage_tenant);
         dnotification = (TextView) findViewById(R.id.dnotification);
         dchat = (TextView) findViewById(R.id.dchat);
+        text_chat=(TextView)findViewById(R.id.text_chat);
         dsetting = (TextView) findViewById(R.id.dsetting);
         dterm_condition = (TextView) findViewById(R.id.dterm_condition);
         dsupport = (TextView) findViewById(R.id.dsupport);
@@ -101,42 +115,137 @@ public class Home_Activity extends AppCompatActivity {
         lin_repair = (LinearLayout) findViewById(R.id.imgtxt_repair);
         lin_banking = (LinearLayout) findViewById(R.id.imgtxt_banking);
         lin_chat = (LinearLayout) findViewById(R.id.imgtxt_chat);
-        imgtxt_chat = (LinearLayout) findViewById(R.id.imgtxt_chat);
         text_image_chat = (LinearLayout) findViewById(R.id.text_image_chat);
+        search_visible=(LinearLayout)findViewById(R.id.search_visible);
+        lin_tool=(LinearLayout)findViewById(R.id.lin_tool);
+        linearlist=(LinearLayout)findViewById(R.id.linearlist);
+        user_header=(LinearLayout)findViewById(R.id.user_header);
 
         fragment_container = (FrameLayout) findViewById(R.id.fragment_container);
 
+        drawer_layout.setDrawerListener(new ActionBarDrawerToggle(this, drawer_layout,  R.string.drawer_open, R.string.drawer_close)
+        {
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                lin_tool.setVisibility(View.VISIBLE);
+                user_header.setVisibility(View.GONE);
 
-        text_chage_string("1");                                     //to set the fragment in home page
-        final Home_Fragment home_fragment = new Home_Fragment();
-        Bundle bundle = new Bundle();
-        home_fragment.setArguments(bundle);
-        FragmentTransaction fragmenttransaction = getSupportFragmentManager().beginTransaction();
-        fragmenttransaction.replace(R.id.fragment_container, home_fragment);
-        fragmenttransaction.commit();
-        text_home.setText("Home");
-        text_home.setTextColor(Color.WHITE);
+            }
 
+            public void onDrawerOpened(View drawerView)
+            {
+                super.onDrawerOpened(drawerView);
+                Log.i("draweropenopen","open");
 
+                    Log.i("draweropenlft","left");
+                lin_tool.setVisibility(View.GONE);
+                user_header.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        if(getIntent().getStringExtra("tag") !=null)
+        {
+            String str = getIntent().getStringExtra("tag");
+
+            text_chage_string("4");                                     //to set the fragment in home page
+            final ChatFragment chatFragment = new ChatFragment();
+            Bundle bundle = new Bundle();
+            chatFragment.setArguments(bundle);
+            FragmentTransaction fragmenttransaction = getSupportFragmentManager().beginTransaction();
+            fragmenttransaction.replace(R.id.fragment_container, chatFragment);
+            fragmenttransaction.commit();
+            text_home.setText("Chat");
+            text_home.setTextColor(Color.WHITE);
+        }
+        else
+        {
+            text_chage_string("1");                                     //to set the fragment in home page
+            final Home_Fragment home_fragment = new Home_Fragment();
+            Bundle bundle = new Bundle();
+            home_fragment.setArguments(bundle);
+            FragmentTransaction fragmenttransaction = getSupportFragmentManager().beginTransaction();
+            fragmenttransaction.replace(R.id.fragment_container, home_fragment);
+            fragmenttransaction.commit();
+            text_home.setText("Home");
+            text_home.setTextColor(Color.WHITE);
+        }
+       /*linearlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listrowfragmentFragment listrowfragmentFragment = new listrowfragmentFragment();
+                Bundle bundle = new Bundle();
+                listrowfragmentFragment.setArguments(bundle);
+                FragmentTransaction fragmenttransaction = getSupportFragmentManager().beginTransaction();
+                fragmenttransaction.replace(R.id.fragment_container, listrowfragmentFragment);
+                fragmenttransaction.commit();
+
+            }
+        });*/
+        bckarrow_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lin_tool.setVisibility(View.VISIBLE);
+                user_header.setVisibility(View.GONE);
+                mDrawerLayout.closeDrawer(Gravity.LEFT);
+            }
+        });
+
+        arrow_search.setOnClickListener(new View.OnClickListener()   //toolbar visibility on afterclick of backpress arrow
+        {
+            @Override
+            public void onClick(View view) {
+                search_visible.setVisibility(View.GONE);
+                lin_tool.setVisibility(View.VISIBLE);
+
+            }
+        });
+        /*lin_tool.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                search_visible.setVisibility(View.GONE);
+                lin_tool.setVisibility(View.VISIBLE);
+            }
+        });*/
+        img_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+               Toast.makeText(Home_Activity.this,"Message",Toast.LENGTH_SHORT).show();
+                search_visible.setVisibility(View.VISIBLE);
+                lin_tool.setVisibility(View.GONE);
+
+            }
+        });
         /*NavigationView navigationView = findViewById(R.id.nav_view);*/
         image_menu.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                Log.i("draweropenbtnclk", "right");
                 if (mDrawerLayout.isDrawerOpen(Gravity.LEFT))
                 {
-                    Log.i("draweropenbtnclk", "right");
+                    user_header.setVisibility(View.GONE);
+                    lin_tool.setVisibility(View.VISIBLE);
                     mDrawerLayout.closeDrawer(Gravity.LEFT);
-                } else
-                    {
-                    if (mDrawerLayout.isDrawerOpen(Gravity.START))
-                    {
-                        mDrawerLayout.closeDrawer(Gravity.START);
-                    }
+                }
+                else
+                {
+                    user_header.setVisibility(View.VISIBLE);
+                    lin_tool.setVisibility(View.GONE);
                     mDrawerLayout.openDrawer(Gravity.LEFT);
                 }
             }
         });
+        /*bckarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Home_Activity.this,Home_Activity.class);
+                startActivity(intent);
+                mDrawerLayout.closeDrawers();
 
+            }
+        });*/
         lin_home.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
@@ -184,18 +293,29 @@ public class Home_Activity extends AppCompatActivity {
                 text_home.setTextColor(Color.WHITE);
             }
         });
-        image_chat.setOnClickListener(new View.OnClickListener() {
+        lin_chat.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
-                Fragment_Chatting fragment_chatting = new Fragment_Chatting();
+            public void onClick(View view)
+            {
+                text_chage_string("4");
+              /*  ChatFragment fragment_chatting = new ChatFragment();
                 Bundle bundle = new Bundle();
                 fragment_chatting.setArguments(bundle);
                 FragmentTransaction fragmenttransaction = getSupportFragmentManager().beginTransaction();
                 fragmenttransaction.replace(R.id.fragment_container, fragment_chatting);
-                fragmenttransaction.commit();
+                fragmenttransaction.commit();*/
+
+
+
+                text_home.setText("CHAT");
+                text_home.setTextColor(Color.WHITE);
+                Intent intent=new Intent(Home_Activity.this,Home_Activity.class);
+                intent.putExtra("tag","Chat");
+                startActivity(intent);
+                finish();
             }
         });
-
         group_name.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
@@ -225,36 +345,72 @@ public class Home_Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 backgroung_string("5");
+                Intent i=new Intent(Home_Activity.this,Home_Activity.class);
+                startActivity(i);
             }
         });
         text_image_chat.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
                 backgroung_string("6");
+
+                Intent intent=new Intent(Home_Activity.this,Home_Activity.class);
+                intent.putExtra("tag","Chat");
+                startActivity(intent);
+                finish();
+                    mDrawerLayout.closeDrawers();         //to close drawer
             }
         });
+
         dsetting.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
                 backgroung_string("7");
+                Intent i=new Intent(Home_Activity.this,EditProfileActivity.class);
+                startActivity(i);
             }
         });
         dterm_condition.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
                 backgroung_string("8");
+                Intent i=new Intent(Home_Activity.this,Activity_Terms_Condition.class);
+                startActivity(i);
             }
         });
+
         dsupport.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
+
                 backgroung_string("9");
+                Intent i=new Intent(Home_Activity.this,Activity_Support.class);
+                startActivity(i);
+
             }
         });
+
         dsign_out.setOnClickListener(new View.OnClickListener() {     //to call fragment
             @Override
             public void onClick(View v) {
                 backgroung_string("10");
+                showAlertDialogButtonClicked(v);
+            }
+
+            public void showAlertDialogButtonClicked(View view){           //function call and AlertDialog
+
+
+                // create and show the alert dialog
+                final Dialog dialog = new Dialog(Home_Activity.this);
+                // AlertDialog dialog = builder.create();
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialog.setContentView(R.layout.logout_popup_activity);
+                yes_text=(TextView)dialog.findViewById(R.id.yes_text);
+                logout_cross=(ImageView)dialog.findViewById(R.id.image_close);
+                no_text=(TextView)dialog.findViewById(R.id.no_text);
+                dialog.show();
             }
         });
     }
@@ -275,6 +431,10 @@ public class Home_Activity extends AppCompatActivity {
         lin_banking.setBackgroundColor(getResources().getColor(R.color.colorLightgray));
         image_banking.setImageResource(R.drawable.banking);
         text_banking.setTextColor(Color.parseColor("#59474b"));
+
+        lin_chat.setBackgroundColor(getResources().getColor(R.color.colorLightgray));
+        image_chat.setImageResource(R.drawable.chat);
+        text_chat.setTextColor(Color.parseColor("#59474b"));
 
         text_chage_string1(str);
 
@@ -318,6 +478,11 @@ public class Home_Activity extends AppCompatActivity {
             lin_banking.setBackgroundColor(getResources().getColor(R.color.colorGreen));
             image_banking.setImageResource(R.drawable.banking_active);
             text_banking.setTextColor(Color.parseColor("#FFFFFF"));
+
+        } else if (string.equals("4")) {
+            lin_chat.setBackgroundColor(getResources().getColor(R.color.colorGreen));
+            image_chat.setImageResource(R.mipmap.chat_active);
+            text_chat.setTextColor(Color.parseColor("#FFFFFF"));
         }
 
     }
@@ -382,4 +547,5 @@ public class Home_Activity extends AppCompatActivity {
 
         }
       }
+
    }

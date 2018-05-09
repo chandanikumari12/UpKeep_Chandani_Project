@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".My_Property_Activity">
+<RelativeLayout
+    android:id="@+id/rel_header"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorGreen">
+    <ImageView
+        android:id="@+id/image_headmyproperty"
+        android:layout_width="@dimen/scal_25dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/back_arrow"
+        android:layout_marginLeft="@dimen/scal_20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_property"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/image_headaddprop1"
+        android:layout_width="@dimen/scal_25dp"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:src="@drawable/search_img"
+        android:layout_marginRight="@dimen/scal_20dp"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tool_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linear_menu"
+            android:id="@+id/recyclerview_repair_contact"/>
+
+        <ImageView
+            android:id="@+id/cir_plus"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/ic_add_white_24dp"
+            android:padding="5dp"
+            android:layout_above="@+id/linear_menu"
+            android:background="@drawable/circle_plus"
+            android:layout_marginBottom="@dimen/scal_20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:id="@+id/imgtxt_home"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorLightgray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/home" />
+
+                <TextView
+                    android:id="@+id/text_home1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/home"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBrown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgtxt_repair"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorLightgray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_repair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/repair" />
+
+                <TextView
+                    android:id="@+id/test_repair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/repair"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBrown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgtxt_banking"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorLightgray"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_banking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/banking" />
+
+                <TextView
+                    android:id="@+id/text_banking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/banking"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorBrown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/imgtxt_chat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorChat"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:src="@drawable/chat" />
+
+                <TextView
+                    android:id="@+id/text_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:text="@string/chat"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorGreen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -84,7 +84,7 @@ public class Repair_Fragment extends Fragment implements SelectableViewHolderMes
 
         for(int i = 0 ;i<7;i++)
         {
-            Item item = new Item("id"+i, "message"+i, "createdon"+i,"isread"+i,"video"+i,getString(R.string.repair_text));
+            Item item = new Item("id"+i, "message"+i, "createdon"+i,"isread"+i,"video"+i,getString(R.string.repair_text),"Repair");
             if(!(selectableItems.contains(item)))
             {
                 selectableItems.add(item);
@@ -123,12 +123,12 @@ public class Repair_Fragment extends Fragment implements SelectableViewHolderMes
         if(id_value.equalsIgnoreCase(id_value_messg))
         {
             id_value_messg ="";
-
+            set_message_group();
         }
         else
         {
             id_value_messg = id_value;
-            set_message_group();
+
         }
     }
 

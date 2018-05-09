@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.wel.upkeep.Adapter.Banking_Adapter;
 import com.example.wel.upkeep.dummy.DummyContent;
 import com.example.wel.upkeep.dummy.DummyContent.DummyItem;
 
@@ -58,27 +59,39 @@ public class Banking_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.banking_fragment, container, false);
-
+        View view = inflater.inflate(R.layout.fragment_banking_, container, false);
+    Context context = view.getContext();
+            RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerview_banking);
         // Set the adapter
-        if (view instanceof RecyclerView) {
-            Context context = view.getContext();
-            RecyclerView recyclerView = (RecyclerView) view;
-            if (mColumnCount <= 1) {
+       /* if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
-            }
-            recyclerView.setAdapter(new MyItemRecyclerViewAdapter3(DummyContent.ITEMS, mListener));
-        }
+            }*/
+         List<Message1> message1List = new java.util.ArrayList<>();
+       Banking_Adapter banking_adapter = new Banking_Adapter(context, message1List) {
+       };
+
+            for(int i = 1;i<5 ;i++)
+                {
+                    Message1 Message1 = new Message1("1", "2","3","4","last");
+                    message1List.add(Message1);
+                }
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setItemAnimator(new android.support.v7.widget.DefaultItemAnimator());
+
+            recyclerView.setAdapter(banking_adapter);
+
         return view;
     }
 
 
-    @Override
+
+    /*@Override
     public void onAttach(Context context) {
         super.onAttach(context);
-    }
+    }*/
 
     @Override
     public void onDetach() {

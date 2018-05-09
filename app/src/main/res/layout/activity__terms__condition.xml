@@ -9,16 +9,17 @@
     tools:context=".Activity_Terms_Condition"
     android:background="@drawable/background_image">
     <ImageView
-        android:id="@+id/image_terms_conditions"
+        android:id="@+id/image_head_terms_con"
         android:layout_width="@dimen/scal_25dp"
+        android:layout_marginTop="@dimen/scal_5dp"
         android:layout_height="@dimen/scal_40dp"
-        android:layout_marginLeft="@dimen/scal_10dp"
-        android:src="@drawable/back_arrow"/>
+        android:src="@drawable/back_arrow"
+        android:layout_marginLeft="@dimen/scal_20dp"/>
+
     <ImageView
         android:id="@+id/image_upkeep"
         android:layout_width="wrap_content"
         android:layout_height="110dp"
-        android:layout_marginTop="15dp"
         android:layout_gravity="center"
         android:src="@drawable/upkeep_signup_image"
         />
@@ -30,7 +31,7 @@
         android:orientation="vertical"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="35dp"
         android:layout_marginBottom="40dp">
 
         <TextView

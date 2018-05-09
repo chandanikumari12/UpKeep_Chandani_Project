@@ -48,7 +48,7 @@ public class Activity_Login extends AppCompatActivity {
         text_four=(TextView)findViewById(R.id.text_sign);
         text_five=(TextView)findViewById(R.id.text_alreadyaccount);
 
-        image_headlogin=(ImageView)findViewById(R.id.image_headlogin);
+       // image_headlogin=(ImageView)findViewById(R.id.image_headlogin);
 
         linear_one= (LinearLayout) findViewById(R.id.lin_signup);
 
@@ -93,13 +93,13 @@ public class Activity_Login extends AppCompatActivity {
                 showAlertDialogButtonClicked(v);
             }
         });
-        image_headlogin.setOnClickListener(new View.OnClickListener() {
+        /*image_headlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(Activity_Login.this,Activity_First.class);
                 startActivity(i);
             }
-        });
+        });*/
 
 
 

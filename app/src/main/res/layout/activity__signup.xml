@@ -11,6 +11,7 @@
     <ImageView
         android:id="@+id/image_head_signup"
         android:layout_width="@dimen/scal_25dp"
+        android:layout_marginTop="@dimen/scal_5dp"
         android:layout_height="@dimen/scal_40dp"
         android:src="@drawable/back_arrow"
         android:layout_marginLeft="@dimen/scal_20dp"/>
@@ -24,7 +25,6 @@
             android:id="@+id/image_upkeep"
             android:layout_width="wrap_content"
             android:layout_height="110dp"
-            android:layout_marginTop="15dp"
             android:src="@drawable/upkeep_signup_image"
             android:layout_gravity="center"
             />
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/scal_20dp"
             android:layout_marginRight="@dimen/scal_20dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/scal_20dp"
             android:paddingBottom="5dp"
             android:background="@drawable/ractangle"
             android:orientation="vertical">
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center"
-                android:layout_marginBottom="@dimen/scal_20dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginLeft="@dimen/scal_20dp"
                 android:layout_marginRight="@dimen/scal_20dp">
 

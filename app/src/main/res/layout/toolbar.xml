@@ -12,7 +12,6 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    android:layout_marginRight="10dp"
     android:weightSum="1">
     <ImageView
         android:id="@+id/image_menu"
@@ -24,9 +23,10 @@
         android:id="@+id/text_home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Home"
+        android:text="@string/home"
         android:textColor="@color/colorWhite"
         android:layout_weight="0.8"
+        android:textAllCaps="true"
         android:layout_gravity="center"
         android:gravity="center"
         android:textSize="20dp"/>

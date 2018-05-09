@@ -11,10 +11,11 @@ package com.example.wel.upkeep.repair_adapter;
 public class SelectableItemMessage extends Item
 {
     private boolean isSelected = false;
+    private String repair_type;
 
     public SelectableItemMessage(Item item,boolean isSelected)
     {
-        super(item.getName(),item.getSurname(),item.getCreatedon(),item.getIsread(),item.getVideo(),item.getType());
+        super(item.getName(),item.getSurname(),item.getCreatedon(),item.getIsread(),item.getVideo(),item.getType(),item.getRepair_type());
         this.isSelected = isSelected;
     }
 
@@ -27,4 +28,6 @@ public class SelectableItemMessage extends Item
     {
         isSelected = selected;
     }
+
+
 }
