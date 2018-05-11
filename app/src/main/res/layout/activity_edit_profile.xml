@@ -61,21 +61,23 @@
 
 
                 <RelativeLayout
-                    android:layout_width="@dimen/scal_50dp"
-                    android:gravity="center_horizontal"
                     android:id="@+id/relative_image"
-                    android:layout_marginTop="@dimen/scal_20dp"
+                    android:layout_width="@dimen/scal_50dp"
+                    android:layout_height="@dimen/scal_50dp"
                     android:layout_gravity="center_horizontal"
-                    android:layout_height="@dimen/scal_50dp">
+                    android:layout_marginTop="@dimen/scal_20dp"
+                    android:gravity="center_horizontal">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@mipmap/property"/>
+                        android:src="@mipmap/property" />
+
                     <ImageView
-                        android:layout_width="20dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="20dp"
                         android:layout_alignParentRight="true"
-                        android:src="@mipmap/close_icon"/>
+                        android:src="@mipmap/edit_round" />
                 </RelativeLayout>
                 <TextView
                     android:layout_width="wrap_content"
@@ -189,6 +191,11 @@
                         android:padding="@dimen/scal_15dp"
                         android:weightSum="2">
 
+                        <View
+                            android:layout_width="0.1dp"
+                            android:layout_height="match_parent"
+                            />
+
                         <ImageView
                             android:id="@+id/female_image"
                             android:layout_width="0dp"
@@ -196,11 +203,6 @@
                             android:layout_marginRight="@dimen/scal_10dp"
                             android:layout_weight="0.5"
                             android:src="@mipmap/fem" />
-
-                        <View
-                            android:layout_width="0.1dp"
-                            android:layout_height="match_parent"
-                            />
 
                         <TextView
                             android:id="@+id/female_button"

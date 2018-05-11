@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/scrollview">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/scal_90dp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/scal_18dp"
+        android:layout_marginRight="@dimen/scal_20dp"
+        android:layout_marginLeft="@dimen/scal_20dp"
+        android:text="The portion on lock attached to door has broker off."/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/scal_20dp"
+        android:id="@+id/linear_home2"
+        android:layout_marginTop="@dimen/scal_20dp"
+        android:layout_below="@+id/linear_home1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/scal_22dp"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorGreen"
+                android:text="$"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorGreen"
+                android:text="Payments :-"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/scal_20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scal_20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"
+                android:text="$9.00"
+                android:textSize="@dimen/scal_20dp"
+                android:gravity="center"
+                android:background="@drawable/green_background2"
+                android:layout_height="@dimen/scal_40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:text="$20.00"
+                android:gravity="center"
+                android:textSize="@dimen/scal_20dp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/gray_background_curve"
+                android:layout_height="@dimen/scal_40dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/scal_10dp"
+                android:gravity="center"
+                android:id="@+id/received_linear"
+                android:background="@drawable/green_background2"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/scal_22dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Received"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/received"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/scal_18dp"
+                        android:layout_marginLeft="@dimen/scal_10dp"
+                        android:textColor="@color/colorBrown"
+                        android:text="3 Payments"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/scal_10dp"
+                android:gravity="center"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/awaiting_linear"
+                android:background="@drawable/green_background"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/scal_22dp"
+                    android:textColor="@color/colorWhite"
+                    android:text="Awaiting"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/awaiting" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorRed"
+                        android:textSize="@dimen/scal_18dp"
+                        android:layout_marginLeft="@dimen/scal_10dp"
+                        android:text="2 Payments"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/linear_home2"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@drawable/repair_popup"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_home3"
+        android:layout_marginLeft="@dimen/scal_20dp"
+        android:layout_marginRight="@dimen/scal_20dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/scal_10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/one_tenant"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/scal_10dp"
+                android:text="Tenant Contacts"
+                android:layout_gravity="center_vertical"
+                android:textSize="@dimen/scal_20dp"
+                android:textColor="@color/colorGreen"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_tenant_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linear_home3"
+        android:orientation="vertical"
+        android:background="@drawable/repair_popup"
+        android:layout_margin="@dimen/scal_20dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/scal_10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/scal_40dp"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/repair_one"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repair Requests"
+                android:layout_marginLeft="@dimen/scal_10dp"
+                android:textSize="@dimen/scal_20dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorGreen"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:weightSum="2"
+            android:padding="@dimen/scal_10dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/awaiting"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:id="@+id/phone_icon"
+                android:layout_weight="0.5"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username"
+                android:layout_weight="1"
+                android:textColor="@color/colorRed"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:gravity="center_horizontal"
+                android:text="Back door glass does not work"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@mipmap/arrow"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:id="@+id/message_icon"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:weightSum="2"
+            android:padding="@dimen/scal_10dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/awaiting"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:layout_weight="0.5"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorRed"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:gravity="center_horizontal"
+                android:text="Back door glass does not work"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@mipmap/arrow"
+                android:layout_marginRight="@dimen/scal_10dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal" android:layout_width="match_parent"
+            android:weightSum="2"
+            android:padding="@dimen/scal_10dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/awaiting"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:layout_weight="0.5"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorRed"
+                android:layout_marginRight="@dimen/scal_10dp"
+                android:gravity="center_horizontal"
+                android:text="Back door glass does not work"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:src="@mipmap/arrow"
+                android:layout_marginRight="@dimen/scal_10dp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout></ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="colorPrimary">#53ab31</color>
+<color name="colorPrimaryDark">#303F9F</color>
+<color name="colorAccent">#FFFFFF</color>
+<color name="colorGreen">#53ab31</color>
+<color name="colorBrown">#59474b</color>
+<color name="colorGray">#99a2b3</color>
+<color name="colorWhite">#FFFFFF</color>
+<color name="colorRed">#cd4438</color>
+<color name="colorBlue">#3e68c1</color>
+<color name="colorBtn">#e2e2e2</color>
+<color name="colorDotline">#59474b</color>
+<color name="colorLightgray">#f2f2f3</color>
+<color name="colorChat">#dadada</color>
+<color name="year">#999999</color>
+<color name="title">#222222</color>
+<color name="colorCompleted">#379116</color>
+<color name="colorNevigationselect">#457e2d</color>
+<color name="repair_text">#756966</color>
+    <color name="home_recycler_color">#dadada</color>
+</resources>

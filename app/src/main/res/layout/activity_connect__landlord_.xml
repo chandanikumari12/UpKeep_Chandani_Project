@@ -34,10 +34,9 @@
                 android:id="@+id/text_home"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/home"
+                android:text="Connect Landlord"
                 android:textColor="@color/colorWhite"
                 android:layout_weight="0.8"
-                android:textAllCaps="true"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="20dp"/>
@@ -50,5 +49,36 @@
                 android:layout_weight="0.1"/>
         </LinearLayout>
     </LinearLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/frame_contain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/scal_10dp"
+        android:layout_above="@+id/text_loginbtn">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/fragment_connect_landlord_item" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_loginbtn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/ract_button"
+        android:gravity="center"
+        android:text="Save"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/scal_20dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorWhite" />
+    </RelativeLayout>
 
 </LinearLayout>

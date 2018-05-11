@@ -1,0 +1,29 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/chart_ractangle"
+    android:layout_gravity="bottom"
+    >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_weight="1"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Write a message"
+        android:textColor="#000000"
+        android:textColorHint="#CFD8DC" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:padding="4dp"
+        android:layout_marginTop="@dimen/scal_5dp"
+        android:tint="@color/colorGreen"
+        android:src="@mipmap/send"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

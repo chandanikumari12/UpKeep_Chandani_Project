@@ -30,7 +30,7 @@ public class RecyclerView_chat_user_adapter   extends RecyclerView.Adapter<Recyc
     private List<Message1> moviesList;
     Context activity1;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder
+    public static class MyViewHolder extends RecyclerView.ViewHolder
     {
         LinearLayout linear_members;
         public MyViewHolder(View itemView)

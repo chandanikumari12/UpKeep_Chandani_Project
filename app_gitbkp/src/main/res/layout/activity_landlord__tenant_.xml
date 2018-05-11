@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Landlord_Tenant_Activity"
+    android:background="@color/colorGreen">
+    <ImageView
+        android:id="@+id/image_upkeep"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/upkeep_signup_image"
+        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        >
+    <LinearLayout
+        android:id="@+id/image_landlord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/scal_25dp"
+        android:background="@drawable/white_ractangle"
+        android:layout_marginLeft="@dimen/scal_20dp"
+        android:layout_marginRight="@dimen/scal_20dp"
+        android:padding="10dp"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/img_llord"
+            android:layout_width="170dp"
+            android:layout_height="90dp"
+            android:paddingTop="@dimen/scal_10dp"
+            android:src="@drawable/layer_down"
+            android:layout_gravity="center_vertical"/>
+        <ImageView
+            android:id="@+id/img_back1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_image"
+            android:padding="10dp" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/image_tenant"
+            android:layout_below="@+id/image_landlord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/white_ractangle"
+            android:layout_marginTop="@dimen/scal_30dp"
+            android:layout_marginLeft="@dimen/scal_20dp"
+            android:layout_marginRight="@dimen/scal_20dp"
+            android:padding="@dimen/scal_10dp"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/img_tanent"
+                android:layout_width="170dp"
+                android:layout_height="90dp"
+                android:padding="@dimen/scal_5dp"
+                android:src="@drawable/layer_up"/>
+            <ImageView
+                android:id="@+id/img_back2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back_image"
+                android:padding="10dp"
+                android:layout_gravity="center_vertical"/>
+
+
+    </LinearLayout>
+</LinearLayout>
+</RelativeLayout>

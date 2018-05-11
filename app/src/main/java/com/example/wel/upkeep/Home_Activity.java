@@ -34,7 +34,6 @@ import android.widget.Toast;
 
 
 
-import com.example.wel.upkeep.Adapter.RecyclerViewAdapter;
 import com.example.wel.upkeep.Edit_profile.EditProfileActivity;
 import com.example.wel.upkeep.chat_system.chat_screen.Chat_Screen_Fragment;
 
@@ -411,12 +410,32 @@ public class Home_Activity extends AppCompatActivity {
                 logout_cross=(ImageView)dialog.findViewById(R.id.image_close);
                 no_text=(TextView)dialog.findViewById(R.id.no_text);
                 dialog.show();
+
+                logout_cross.setOnClickListener(new View.OnClickListener() {
+
+                    public void onClick(View popupView) {
+                        dialog.dismiss();
+                    }
+                });
+
+
+                yes_text.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View popupView) {
+                                Intent intent=new Intent(Home_Activity.this,Activity_First.class);
+                                startActivity(intent);
+                                finish();
+                    }
+                });
+                no_text.setOnClickListener(new View.OnClickListener() {
+
+                    public void onClick(View popupView) {
+                        dialog.dismiss();
+                    }
+                });
             }
         });
     }
-
-
-
 
 
     private void text_chage_string(String str) {
